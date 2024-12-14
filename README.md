@@ -188,6 +188,8 @@ The callback function is provided the following arguments:
     // returns <ndarray>
     ```
 
+-   The function **always** returns an [ndarray][@stdlib/ndarray/ctor] having the same shape and [order][@stdlib/ndarray/orders] as the input [ndarray][@stdlib/ndarray/ctor].
+
 -   For very high-dimensional ndarrays which are non-contiguous, one should consider copying the underlying data to contiguous memory before applying a callback function in order to achieve better performance.
 
 </section>
@@ -306,6 +308,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 [@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
+
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
 
 <!-- <related-links> -->
 
