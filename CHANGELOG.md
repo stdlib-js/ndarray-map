@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`3cd740e`](https://github.com/stdlib-js/stdlib/commit/3cd740ed3e550ee7411139fef930a96216cff5d9) - **docs:** add example _(by Athan Reines)_
 -   [`17430f4`](https://github.com/stdlib-js/stdlib/commit/17430f4a7f15da00c9288b2b4d0577b6b7f8007f) - **docs:** add note _(by Athan Reines)_
 -   [`082a45a`](https://github.com/stdlib-js/stdlib/commit/082a45a9540b2af89f8cb3bc0b11e56b14e3ff8c) - **style:** fix missing empty line _(by Athan Reines)_
 -   [`849c335`](https://github.com/stdlib-js/stdlib/commit/849c33579ea43f853fee93368431275d5481140a) - **docs:** fix description _(by Athan Reines)_
