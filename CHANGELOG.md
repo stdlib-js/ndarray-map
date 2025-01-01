@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-22)
+## Unreleased (2025-01-01)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`8a15baa`](https://github.com/stdlib-js/stdlib/commit/8a15baa639e8c4f45479821cf7331715e0546e86) - **docs:** update related packages sections [(#4425)](https://github.com/stdlib-js/stdlib/pull/4425) _(by stdlib-bot)_
 -   [`acb12c7`](https://github.com/stdlib-js/stdlib/commit/acb12c77fd8eca09956f62e052f79ce1a0d9c1d0) - **refactor:** improve type specificity for array provided to callback _(by Athan Reines)_
 -   [`a1b543a`](https://github.com/stdlib-js/stdlib/commit/a1b543a2a1bdf4d1fb9438bd4a13cb971af62063) - **docs:** update related packages sections [(#4009)](https://github.com/stdlib-js/stdlib/pull/4009) _(by stdlib-bot, Philipp Burckhardt)_
 -   [`4cc1f54`](https://github.com/stdlib-js/stdlib/commit/4cc1f54e1c601aefcf00bfa03948f2909eba60be) - **docs:** update example _(by Athan Reines)_
