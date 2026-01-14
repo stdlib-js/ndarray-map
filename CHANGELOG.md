@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-25)
+## Unreleased (2026-01-14)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`571b88f`](https://github.com/stdlib-js/stdlib/commit/571b88f7e7b93c3578efc017cb8e3bd9b6b99954) - **docs:** improve doctests for ndarray instances in `ndarray/map` [(#9676)](https://github.com/stdlib-js/stdlib/pull/9676) _(by Shreelaxmi Hegde, Athan Reines)_
 -   [`3938b26`](https://github.com/stdlib-js/stdlib/commit/3938b265e603116448c89fcaa58df70e79d40f59) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`8a15baa`](https://github.com/stdlib-js/stdlib/commit/8a15baa639e8c4f45479821cf7331715e0546e86) - **docs:** update related packages sections [(#4425)](https://github.com/stdlib-js/stdlib/pull/4425) _(by stdlib-bot)_
 -   [`acb12c7`](https://github.com/stdlib-js/stdlib/commit/acb12c77fd8eca09956f62e052f79ce1a0d9c1d0) - **refactor:** improve type specificity for array provided to callback _(by Athan Reines)_
@@ -45,12 +46,13 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gururaj Gurram
 -   Muhammad Haris
 -   Philipp Burckhardt
+-   Shreelaxmi Hegde
 
 </section>
 
