@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-map
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-map = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var map = require( 'path/to/vendor/umd/ndarray-map/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.map;
-})();
-</script>
+var map = require( '@stdlib/ndarray-map' );
 ```
 
 #### map( x\[, options], fcn\[, thisArg] )
@@ -84,7 +78,6 @@ Applies a callback function to elements in an input [ndarray][@stdlib/ndarray/ct
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 var ndarray = require( '@stdlib/ndarray-ctor' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 function scale( z ) {
     return z * 10.0;
@@ -99,10 +92,7 @@ var x = ndarray( 'float64', buffer, shape, strides, offset, 'row-major' );
 // returns <ndarray>
 
 var y = map( x, scale );
-// returns <ndarray>
-
-var arr = ndarray2array( y );
-// returns [ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
+// returns <ndarray>[ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
 ```
 
 The function accepts the following arguments:
@@ -124,7 +114,6 @@ By default, the output ndarray [data type][@stdlib/ndarray/dtypes] is inferred f
 var Float64Array = require( '@stdlib/array-float64' );
 var ndarray = require( '@stdlib/ndarray-ctor' );
 var dtype = require( '@stdlib/ndarray-dtype' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 function scale( z ) {
     return z * 10.0;
@@ -142,13 +131,10 @@ var opts = {
     'dtype': 'float32'
 };
 var y = map( x, opts, scale );
-// returns <ndarray>
+// returns <ndarray>[ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
 
-var dt = dtype( y );
+var dt = String( dtype( y ) );
 // returns 'float32'
-
-var arr = ndarray2array( y );
-// returns [ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
 ```
 
 To set the callback function execution context, provide a `thisArg`.
@@ -158,7 +144,6 @@ To set the callback function execution context, provide a `thisArg`.
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
 var ndarray = require( '@stdlib/ndarray-ctor' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 function scale( z ) {
     this.count += 1;
@@ -177,10 +162,7 @@ var ctx = {
     'count': 0
 };
 var y = map( x, scale, ctx );
-// returns <ndarray>
-
-var arr = ndarray2array( y );
-// returns [ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
+// returns <ndarray>[ [ 20.0, 30.0, 40.0 ], [ 80.0, 90.0, 100.0 ] ]
 
 var count = ctx.count;
 // returns 6
@@ -208,7 +190,6 @@ The callback function is provided the following arguments:
     var Float64Array = require( '@stdlib/array-float64' );
     var ndarray = require( '@stdlib/ndarray-ctor' );
     var Complex128 = require( '@stdlib/complex-float64-ctor' );
-    var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
     function toComplex( z ) {
         return new Complex128( z, 0.0 );
@@ -243,18 +224,13 @@ The callback function is provided the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var map = require( '@stdlib/ndarray-map' );
 
 var buffer = discreteUniform( 10, -100, 100, {
     'dtype': 'generic'
@@ -267,11 +243,6 @@ console.log( ndarray2array( x ) );
 
 var y = map( x, naryFunction( abs, 1 ) );
 console.log( ndarray2array( y ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -319,7 +290,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -345,8 +316,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -365,21 +336,21 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-map/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
-[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders/tree/umd
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter/tree/umd
+[@stdlib/ndarray/filter]: https://github.com/stdlib-js/ndarray-filter
 
-[@stdlib/ndarray/filter-map]: https://github.com/stdlib-js/ndarray-filter-map/tree/umd
+[@stdlib/ndarray/filter-map]: https://github.com/stdlib-js/ndarray-filter-map
 
-[@stdlib/ndarray/for-each]: https://github.com/stdlib-js/ndarray-for-each/tree/umd
+[@stdlib/ndarray/for-each]: https://github.com/stdlib-js/ndarray-for-each
 
-[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice/tree/umd
+[@stdlib/ndarray/slice]: https://github.com/stdlib-js/ndarray-slice
 
 <!-- </related-links> -->
 
