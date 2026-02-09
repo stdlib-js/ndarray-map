@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import map from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@esm/index.mjs';
+import map from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@v0.1.1-esm/index.mjs';
 ```
 
 #### map( x\[, options], fcn\[, thisArg] )
@@ -217,7 +217,7 @@ import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import map from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@esm/index.mjs';
+import map from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@v0.1.1-esm/index.mjs';
 
 var buffer = discreteUniform( 10, -100, 100, {
     'dtype': 'generic'
