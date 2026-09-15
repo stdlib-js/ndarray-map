@@ -48,9 +48,11 @@
     "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
   "devDependencies": {
+    "@stdlib/array-float16": "github:stdlib-js/array-float16#main",
     "@stdlib/array-float32": "^0.2.3",
     "@stdlib/array-float64": "^0.2.3",
     "@stdlib/array-ones": "^0.2.2",
+    "@stdlib/assert-is-same-float16array": "github:stdlib-js/assert-is-same-float16array#main",
     "@stdlib/assert-is-same-float32array": "^0.2.3",
     "@stdlib/assert-is-same-float64array": "^0.2.3",
     "@stdlib/blas-ext-base-dfill": "^0.3.1",

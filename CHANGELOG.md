@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-18)
+## Unreleased (2026-09-15)
+
+<section class="features">
+
+### Features
+
+-   [`a2aaa2b`](https://github.com/stdlib-js/stdlib/commit/a2aaa2b22422a3b5db27fb5ce0b50ba5c0023fe1) - add float16 dtype support to `ndarray/map` [(#15250)](https://github.com/stdlib-js/stdlib/pull/15250)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`a2aaa2b`](https://github.com/stdlib-js/stdlib/commit/a2aaa2b22422a3b5db27fb5ce0b50ba5c0023fe1) - **feat:** add float16 dtype support to `ndarray/map` [(#15250)](https://github.com/stdlib-js/stdlib/pull/15250) _(by Samarth Kolarkar)_
 -   [`5aadc76`](https://github.com/stdlib-js/stdlib/commit/5aadc76d03d8e3c511de2f14131be73dfe118af9) - **bench:** refactor to use string interpolation in `ndarray` [(#11445)](https://github.com/stdlib-js/stdlib/pull/11445) _(by Karan Anand)_
 
 </details>
@@ -24,9 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Karan Anand
+-   Samarth Kolarkar
 
 </section>
 
